@@ -1,18 +1,16 @@
 .container{
+    display: grid;
     height: 100vh;
     width: auto;
     border-color: blueviolet;
-    display: grid;
-    grid-template-rows: repeat(16, 1fr);
-    grid-template-columns: repeat(16, 1fr);
-    align-content: center;
-    justify-content: center;
+    background-color: whitesmoke;
 
 }
 
 
 .cell{
     border: 1px solid black;
+    padding: 3%;
     transition: all .5s linear;
 }
 
@@ -20,3 +18,4 @@
     background-color: black;
     transition: background-color 1;
 }
+

@@ -1,12 +1,17 @@
 const generate = document.querySelector('button'); // select the generate button
+const grid = document.querySelector(".container"); // select container 
+
+
 // at generate button click:
 generate.addEventListener('click', ()=>{
-    // user inputs the grid dimension
-    const dims =  parseInt(prompt('Give a Dimension to the Square Grid: '));
+    
+    grid.innerHTML = ''; // reset grid
+    
+    // user inputs the grid dimension for the 
+    let dims =  parseInt(prompt('Give a Dimension to the Square Grid: '));
 
-    if (dims <= 100 && dims > 0){ // 0 > dims >= 100
+    if (dims <= 100 && dims >= 0){ // 0 > dims >= 100
         // Generate the Grid  
-        const grid = document.querySelector(".container");
         grid.style.gridTemplateRows = `repeat(${dims}, 1fr)`;
         grid.style.gridTemplateColumns = `repeat(${dims}, 1fr)`;
         for(let i=0;i<dims*dims;i++){
